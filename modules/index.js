@@ -73,7 +73,10 @@ app.post(
         // Handle image file processing here
         console.log("fileType = 'Image'");
         ocrText = await ocr_extract(uploadedFilePath);
+        // console.log(ocrText);
+        console.log("OCR done");
         translatedText = await translate_mod.translateText(ocrText);
+        // console.log(translatedText);
       } else if (mimeType === 'application/pdf') {
         // Handle PDF file processing here
         console.log("fileType = 'PDF'");
